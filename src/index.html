@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your JavaScript Playground</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>  Artify</h1>
+      <nav>
+          <button id="Home">All Art</button>
+          <button id="Modern">Modern Arts</button>
+          <button id="Classics">Classic Arts</button>
+          <button id="Favourites">Favorites</button>
+      </nav>
+  </header>
+  <iframe id = "contentFrame" src="" title="Gallery"></iframe>
+  <script>
+    const Home = document.getElementById('Home');
+    const Modern = document.getElementById('Modern');
+    const Classics = document.getElementById('Classics');
+    Home.addEventListener('click', () => {
+      contentFrame.src = 'Home.html';
+    });
+    Modern.addEventListener('click', () => {
+      contentFrame.src = 'Modern.html';
+    });
+    Classics.addEventListener('click', () => {
+      contentFrame.src = 'Classics.html';
+    });
+  </script>
+    <footer>
+        <p>&copy; 2024 Artify</p>
+    </footer>
+  </body>
+</html>
